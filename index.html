@@ -42,9 +42,104 @@
             min-height: 100vh;
             margin: 0 auto;
             background-color: var(--beige-bg);
+            background-image:
+                radial-gradient(circle at 18% 18%, rgba(255, 251, 242, 0.65) 0%, transparent 45%),
+                radial-gradient(circle at 85% 42%, rgba(196, 166, 112, 0.16) 0%, transparent 48%),
+                radial-gradient(circle at 25% 74%, rgba(255, 250, 240, 0.55) 0%, transparent 45%),
+                repeating-linear-gradient(45deg, rgba(156, 125, 66, 0.025) 0px, rgba(156, 125, 66, 0.025) 1px, transparent 1px, transparent 22px),
+                repeating-linear-gradient(-45deg, rgba(156, 125, 66, 0.025) 0px, rgba(156, 125, 66, 0.025) 1px, transparent 1px, transparent 22px);
             position: relative;
             overflow-x: hidden;
             box-shadow: 0 0 60px rgba(45, 38, 28, 0.28);
+        }
+
+        /* Elegant Botanical Divider & Children Note Card */
+        .botanical-divider {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            width: 100%;
+            max-width: 260px;
+            margin: 4px auto 14px;
+            color: var(--gold-accent);
+        }
+        .botanical-divider::before,
+        .botanical-divider::after {
+            content: "";
+            flex: 1;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(156, 125, 66, 0.55), transparent);
+        }
+
+        .children-note-card {
+            width: 100%;
+            max-width: 395px;
+            background: linear-gradient(180deg, rgba(250, 247, 240, 0.92) 0%, rgba(238, 230, 216, 0.92) 100%);
+            border: 1px solid rgba(156, 125, 66, 0.35);
+            border-radius: 20px;
+            padding: 24px 20px;
+            box-shadow: 0 12px 28px rgba(74, 67, 56, 0.09), inset 0 0 0 4px rgba(255, 253, 248, 0.45);
+        }
+
+        .children-note-title {
+            font-family: 'Amiri', serif;
+            font-size: 1.45rem;
+            font-weight: 700;
+            color: var(--gold-deep);
+            margin-bottom: 8px;
+        }
+
+        .children-note-text {
+            font-family: 'Amiri', serif;
+            font-size: 1.18rem;
+            line-height: 1.85;
+            color: var(--ink-charcoal);
+        }
+
+        /* Luxury Closing Footer ("ربي يهنينا") */
+        .closing-footer-box {
+            width: 100%;
+            max-width: 400px;
+            margin-top: 8px;
+            padding: 28px 18px 24px;
+            border-top: 1px solid rgba(156, 125, 66, 0.35);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            gap: 10px;
+        }
+
+        .rabbi-yuhannina {
+            font-family: 'Amiri', serif;
+            font-size: 2.1rem;
+            font-weight: 700;
+            color: var(--gold-deep);
+            line-height: 1.35;
+        }
+
+        .footer-rings-crest {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            margin: 2px 0;
+        }
+
+        .footer-couple-names {
+            font-family: 'Great Vibes', cursive;
+            font-size: 2.15rem;
+            color: var(--ink-charcoal);
+            direction: ltr;
+            line-height: 1.1;
+        }
+
+        .footer-copyright {
+            font-family: 'Tajawal', sans-serif;
+            font-size: 0.8rem;
+            color: var(--ink-muted);
+            letter-spacing: 0.3px;
         }
 
         #petals-canvas {
@@ -990,14 +1085,7 @@
                         لِّتَسْكُنُوا إِلَيْهَا وَجَعَلَ بَيْنَكُم مَّوَدَّةً وَرَحْمَةً<br>
                         إِنَّ فِي ذَٰلِكَ لَآيَاتٍ لِّقَوْمٍ يَتَفَكَّرُونَ
                     </p>
-                    <p class="quran-english">
-                        “And among His signs is that He created for you<br>
-                        mates from among yourselves, that you may<br>
-                        find tranquility in them, and He placed between<br>
-                        you affection and mercy. Indeed in that are<br>
-                        signs for a people who reflect.”
-                    </p>
-                    <div class="surah-ref">SURAH AR-RUM — 30:21</div>
+                    <div class="surah-ref" style="direction: rtl; letter-spacing: 0; font-family: 'Amiri', serif; font-size: 1.05rem; margin-top: 6px;">سورة الروم — آية ٢١</div>
                 </div>
             </section>
 
@@ -1184,6 +1272,17 @@
                 </div>
             </section>
 
+            <!-- 7.5 CHILDREN POLITE NOTE & FLORAL DIVIDER -->
+            <section class="section-block reveal" style="padding-top: 18px; padding-bottom: 18px;">
+                <div class="botanical-divider">✦ ❦ ✦</div>
+                <div class="children-note-card">
+                    <div class="children-note-title">تنويه لطف لأحبائنا الصغار</div>
+                    <p class="children-note-text">
+                        نحبكم ونفرح بوجودكم دائماً، ولكن نظراً لطبيعة الحفل وحرصاً على راحتكم وسلامة أطفالنا الأحباء، نعتذر عن اصطحاب الأطفال، ونسأل الله أن يبارك فيهم ويجعلهم قرة عين لأهليهم 🤍
+                    </p>
+                </div>
+            </section>
+
             <!-- 8. RSVP CARD -->
             <section class="section-block reveal" style="padding-bottom: 64px;">
                 <div class="rsvp-card">
@@ -1210,6 +1309,21 @@
                     </div>
                 </div>
             </section>
+
+            <!-- 9. CLOSING BLESSING ("ربي يهنينا") & FOOTER -->
+            <footer class="closing-footer-box reveal">
+                <div class="rabbi-yuhannina">ربي يهنينا</div>
+                <div class="footer-rings-crest" aria-label="Wedding rings and heart">
+                    <svg width="88" height="36" viewBox="0 0 88 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="31" cy="19" r="10.5" stroke="#9c7d42" stroke-width="2.2"/>
+                        <circle cx="57" cy="19" r="10.5" stroke="#9c7d42" stroke-width="2.2"/>
+                        <polygon points="31,5 34,8.5 31,12 28,8.5" fill="#9c7d42"/>
+                        <path d="M44 26 C44 26 39 22.5 39 19.8 C39 18.2 40.3 17 41.8 17 C42.9 17 43.6 17.6 44 18.3 C44.4 17.6 45.1 17 46.2 17 C47.7 17 49 18.2 49 19.8 C49 22.5 44 26 44 26 Z" fill="#c93b4b"/>
+                    </svg>
+                </div>
+                <div class="footer-couple-names">Hosam &amp; Roaa</div>
+                <div class="footer-copyright">© 2026 حسام الصادي &amp; رؤى الرقيق — جميع الحقوق محفوظة</div>
+            </footer>
 
         </main>
     </div>
@@ -1352,21 +1466,30 @@
             btn.disabled = true;
 
             var guestName = form.querySelector('[name="الاسم_الكريم"]').value;
-            var data = new FormData(form);
-            data.append('_subject', 'تأكيد حضور جديد - زفاف حسام ورؤى (' + guestName + ')');
-            data.append('_cc', 'roaajomaa908@gmail.com');
-            data.append('_captcha', 'false');
+            var attendance = form.querySelector('[name="حالة_الحضور"]').value;
+            var message = form.querySelector('[name="رسالة_للعروسين"]').value;
+            var subjectText = 'تأكيد حضور جديد - زفاف حسام ورؤى (' + guestName + ')';
 
-            fetch('https://formsubmit.co/ajax/Hosamassadi@gmail.com', {
-                method: 'POST',
-                body: data,
-                headers: { 'Accept': 'application/json' }
-            })
-            .then(function() {
-                form.style.display = 'none';
-                document.getElementById('rsvpSuccess').style.display = 'block';
-            })
-            .catch(function() {
+            function sendToEndpoint(url) {
+                var fd = new FormData();
+                fd.append('الاسم_الكريم', guestName);
+                fd.append('حالة_الحضور', attendance);
+                fd.append('رسالة_للعروسين', message);
+                fd.append('_subject', subjectText);
+                fd.append('_captcha', 'false');
+                fd.append('_template', 'table');
+                return fetch(url, {
+                    method: 'POST',
+                    body: fd,
+                    headers: { 'Accept': 'application/json' }
+                }).catch(function() { return null; });
+            }
+
+            // Send directly to both Hosamassadi@gmail.com and roaajomaa908@gmail.com
+            Promise.all([
+                sendToEndpoint('https://formsubmit.co/ajax/Hosamassadi@gmail.com'),
+                sendToEndpoint('https://formsubmit.co/ajax/roaajomaa908@gmail.com')
+            ]).then(function() {
                 form.style.display = 'none';
                 document.getElementById('rsvpSuccess').style.display = 'block';
             });
@@ -1375,7 +1498,7 @@
         (function initPetals() {
             var canvas = document.getElementById('petals-canvas');
             var ctx = canvas.getContext('2d');
-            var petals = [];
+            var motes = [];
 
             function resize() {
                 canvas.width = canvas.offsetWidth * (window.devicePixelRatio || 1);
@@ -1384,42 +1507,46 @@
             resize();
             window.addEventListener('resize', resize);
 
-            for (var i = 0; i < 22; i++) {
-                petals.push({
+            for (var i = 0; i < 16; i++) {
+                motes.push({
                     x: Math.random(),
                     y: Math.random(),
-                    w: 4 + Math.random() * 5,
-                    h: 2.5 + Math.random() * 3,
-                    vy: 0.00035 + Math.random() * 0.0005,
-                    vx: (Math.random() - 0.5) * 0.0003,
-                    rot: Math.random() * Math.PI * 2,
-                    vrot: (Math.random() - 0.5) * 0.02,
-                    alpha: 0.35 + Math.random() * 0.35
+                    r: 1.2 + Math.random() * 2.2,
+                    vy: -0.00014 - Math.random() * 0.00022,
+                    vx: (Math.random() - 0.5) * 0.00014,
+                    phase: Math.random() * Math.PI * 2,
+                    alpha: 0.18 + Math.random() * 0.24
                 });
             }
 
-            function render() {
+            function render(t) {
+                t = t || 0;
                 ctx.clearRect(0, 0, canvas.width, canvas.height);
                 var dpr = window.devicePixelRatio || 1;
-                for (var i = 0; i < petals.length; i++) {
-                    var p = petals[i];
-                    p.y += p.vy;
-                    p.x += p.vx + Math.sin(p.y * 12) * 0.0002;
-                    p.rot += p.vrot;
-                    if (p.y > 1.05) { p.y = -0.05; p.x = Math.random(); }
+                for (var i = 0; i < motes.length; i++) {
+                    var m = motes[i];
+                    m.y += m.vy;
+                    m.x += m.vx + Math.sin(t * 0.0008 + m.phase) * 0.00008;
+                    if (m.y < -0.04) { m.y = 1.04; m.x = Math.random(); }
 
-                    ctx.save();
-                    ctx.translate(p.x * canvas.width, p.y * canvas.height);
-                    ctx.rotate(p.rot);
-                    ctx.fillStyle = 'rgba(186, 150, 95, ' + p.alpha + ')';
+                    var px = m.x * canvas.width;
+                    var py = m.y * canvas.height;
+                    var rad = m.r * dpr * 2.6;
+                    var shimmer = m.alpha * (0.7 + 0.3 * Math.sin(t * 0.002 + m.phase));
+
+                    var grad = ctx.createRadialGradient(px, py, 0, px, py, rad);
+                    grad.addColorStop(0, 'rgba(255, 248, 228, ' + shimmer + ')');
+                    grad.addColorStop(0.55, 'rgba(182, 148, 88, ' + (shimmer * 0.45) + ')');
+                    grad.addColorStop(1, 'rgba(182, 148, 88, 0)');
+
+                    ctx.fillStyle = grad;
                     ctx.beginPath();
-                    ctx.ellipse(0, 0, p.w * dpr, p.h * dpr, 0, 0, Math.PI * 2);
+                    ctx.arc(px, py, rad, 0, Math.PI * 2);
                     ctx.fill();
-                    ctx.restore();
                 }
                 requestAnimationFrame(render);
             }
-            render();
+            requestAnimationFrame(render);
         })();
     </script>
 </body>
